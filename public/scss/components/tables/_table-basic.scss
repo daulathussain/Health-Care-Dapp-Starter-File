@@ -1,0 +1,199 @@
+//style for all basic tables
+.table {
+	color:
+	strong{
+		color:$dark;
+	}
+	th, td{
+		border-color: $border;
+	}
+	th{
+		padding: 25px 20px;
+		border-bottom:1px solid rgba($border,0.3);
+		border-top:none;
+		
+		@at-root [data-theme-version="dark"] & {
+            border-color: $d-border;
+        }
+		@include respond('phone-land') {
+			padding: 10px 15px;
+		}
+	}
+	td{
+		padding: 15px 20px!important;
+        border-color: rgba($border,0.5);
+		border-bottom:1px solid;
+		border-top:none;
+		white-space:nowrap;
+		@include respond('phone-land') {
+			padding: 10px 15px;
+		}
+        @at-root [data-theme-version="dark"] & {
+            border-color: $d-border;
+        }
+	}
+	&.table-striped tbody tr:nth-of-type(odd),
+	&.table-hover tr:hover{
+	    background-color:$l-bg;
+		
+		@at-root [data-theme-version="dark"] & {
+            background-color: $d-bg;
+        }
+	}
+
+    thead th {
+        border-bottom-width: 1px;
+        text-transform: uppercase;
+        color: $black ;
+       // font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-color: rgba($border,0.3);
+    }
+    tbody  tr td {
+        
+        vertical-align: middle;
+        border-color: rgba($border,0.3);
+        
+		@at-root [data-theme-version="dark"] & {
+            border-color: $d-border;
+        }
+    }
+	
+	//delete header borders without '.borders tables'
+    &:not(.table-bordered) {
+        thead th {
+            border-top: none;
+        }
+    }
+
+    //heading background
+    .thead-primary th {
+        background-color:var(--primary);
+        color: $white;
+    }
+	.thead-info th {
+        background-color: $info;
+        color: $white;
+    }
+	.thead-warning th {
+        background-color: $warning;
+        color: $white;
+    }
+	.thead-danger th {
+        background-color: $danger;
+        color: $white;
+    }
+	.thead-success th {
+        background-color: $success;
+        color: $white;
+    }
+
+    //table border
+    &.primary-table-bordered {
+        border: 1px solid $border;
+		@at-root [data-theme-version="dark"] & {
+            border-color: $d-border;
+        }
+    }
+
+    //table hover
+    &.primary-table-bg-hover {
+        thead th {
+            background-color: var(--primary-dark);
+            color: $white;
+            border-bottom: none;
+        }
+
+        tbody tr {
+            background-color:var(--primary);
+            color: $white;
+            transition: all .1s ease;
+
+            &:hover {
+                background-color: var(--rgba-primary-5);
+            }
+        }
+    }
+
+    //responsive table width
+    &-responsive {
+        &-tiny {
+			min-width: 18.75rem;
+        }
+        &-sm {
+			min-width: 30rem !important;
+        }
+        &-md {
+			min-width: 36rem !important;
+        }
+        &-lg {
+            min-width: 60.9375rem !important;
+        }
+        &-xl {
+            min-width: 70.9375rem !important;
+        }
+    }
+}
+.table-primary, 
+.table-primary > th, 
+.table-primary > td {
+	background-color: $primary-light;
+	color: $primary;
+	@at-root [data-theme-version="dark"] & {
+        background-color:var(--rgba-primary-1);
+    }
+}
+.table-success, 
+.table-success > th, 
+.table-success > td {
+	background-color: $success-light;
+	color: $success;
+	@at-root [data-theme-version="dark"] & {
+        background-color: $success-opacity;
+    }
+}
+.table-info, 
+.table-info > th, 
+.table-info > td {
+	background-color: $info-light;
+	color: $info;
+	@at-root [data-theme-version="dark"] & {
+        background-color: $info-opacity;
+    }
+}
+.table-warning, 
+.table-warning > th, 
+.table-warning > td {
+	background-color: $warning-light;
+	color: $warning;
+	@at-root [data-theme-version="dark"] & {
+        background-color: $warning-opacity;
+    }
+}
+.table-danger, 
+.table-danger > th, 
+.table-danger > td {
+	background-color: $danger-light;
+	color: $danger;
+	@at-root [data-theme-version="dark"] & {
+        background-color: $danger-opacity;
+    }
+}
+.table-active, 
+.table-active > th, 
+.table-active > td {
+    background-color: $l-bg;
+	@at-root [data-theme-version="dark"] & {
+        background-color: $d-bg;
+    }
+}
+.table-bordered > :not(caption) > * > *{
+	border-width: 0px 0px;
+}
+.table > :not(:first-child){
+	border-top: 0;
+}
+.dtp table.dtp-picker-days tr > td{
+	padding: 0.5em 0.3em !important;
+}

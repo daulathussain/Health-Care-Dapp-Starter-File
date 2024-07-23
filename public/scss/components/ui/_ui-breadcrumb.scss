@@ -1,0 +1,73 @@
+.page-titles {
+    background: transparent;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    @at-root [data-theme-version="dark"] & {
+        background: $d-bg;
+    }
+
+    @include respond('phone-land') {
+        margin-bottom: 15px;
+    }
+
+    .justify-content-sm-end{
+        align-items: center;
+    }
+
+    h4 {
+        margin-bottom: 0;
+        margin-top: 0;
+        color:var(--primary);
+        font-size: 1.25rem;
+        span {
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+    }
+    .breadcrumb {
+        margin-bottom: 0;
+		background: transparent;
+        
+		li {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            a{
+               color: $l-ctl; 
+
+            }
+
+            &.active{
+				a{
+					color:var(--primary);
+				}
+            }
+			&:before{
+				color:var(--primary);
+			}
+        }
+
+        &-datepicker{
+            font-size: 0.75rem;
+            color: $muted;
+
+            &__icon{
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .breadcrumb-widget{
+        .border-dark{
+            border-color: $gray-300!important;
+        }
+        h4{
+            color: $strong;
+            font-weight: 600;
+        }
+        @include respond('phone') {
+            text-align: left!important;
+            margin-bottom: 0.9375rem;
+        }
+    }   
+}

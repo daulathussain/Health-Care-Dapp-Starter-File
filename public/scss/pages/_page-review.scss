@@ -1,0 +1,105 @@
+.review-table{
+	padding: 25px;
+    border-radius: 0;
+	box-shadow:none;
+	height: auto;
+	border-bottom:1px solid $border-color;
+    margin-bottom: 0;
+	
+	&:last-child{
+		border-bottom:0;
+	}
+	.disease {
+		border-left: 0px solid #eee;
+		padding-left: 20px;
+		@include respond('tab-port') {
+			border-left: 0;
+			padding-left: 0;	
+			margin-right:10px !important;
+			margin-left:0;
+		}
+	}
+	.star-review i{
+	
+		font-size:20px;
+		@include respond('tab-port') {
+			font-size:216x;
+		}
+	}
+	.media-body{
+		p{
+			color:#3e4954;
+			font-size:18px;
+			line-height:1.5;
+			@include respond('tab-port') {
+				font-size:14px;
+			}
+		}
+	}
+	.review-bx{
+		border-#{$dz-pos-right}:1px solid $border-color;
+		
+		@include respond ('tab-port'){
+			border-width:0px;
+			margin-bottom:15px;
+		}
+	}
+	
+	img{
+		@include respond('tab-port') {
+			float: $dz-pos-left;
+			width: 80px;
+		}
+	}
+	@include respond('tab-port') {
+		padding: 15px;
+	}
+	.media{
+		@include respond('tab-port') {
+			display:block !important;
+		}
+		
+	}
+	@include respond('tab-land') {
+		.custom-control{
+			float:right;
+		}
+			
+	}
+	@include respond('tab-port') {
+		padding: 15px;
+	}
+}
+.review-tab.nav-pills{
+	margin-bottom:0;
+	align-items: flex-end;
+	li{
+		display:inline-block;
+		
+		a.nav-link{
+			color: var(--primary);
+			background: var(--rgba-primary-1);
+			text-transform:capitalize;
+			box-shadow: none;
+			border-radius: 0;
+			font-weight: 500;
+			font-size: 1rem;
+			padding: 15px 40px;
+			border-radius:$radius $radius 0 0;
+			margin-right: 1px;
+			&.active{
+				color:$white;
+				background: var(--primary);
+				padding: 20px 40px;
+				@include respond('laptop') {
+					font-size: 14px;
+					padding: 12px 15px;
+				}
+			}
+			@include respond('laptop') {
+				font-size: 14px;
+				padding: 10px 15px;
+			}
+		}
+	}
+}

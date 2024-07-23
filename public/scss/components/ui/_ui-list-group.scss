@@ -1,0 +1,28 @@
+.list-group-item {
+    background-color: rgba(255,255,255,0);
+    border: 1px solid $border;
+	padding: 1rem 1.5rem;
+    @at-root [data-theme-version="dark"] & {
+        border-color: $d-border;
+    }
+}
+
+.list-group-item.disabled, .list-group-item:disabled {
+    color: #fff;
+    background-color: $secondary;
+    border-color: $secondary;
+}
+[class*="bg-"]{
+	.list-group-item{
+		border-color:rgba($white, 0.05);
+		color: #fff;
+	}
+}
+.bg-warning{
+	.list-group-item{
+		border-color:rgba($black, 0.05);
+	}
+}
+.list-group-item.active{
+	background-color: var(--primary);
+}

@@ -1,0 +1,356 @@
+.header-right {
+    height: 100%;
+    .nav-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+		.nav-link {
+            color: $l-ctd;
+            font-size: 18px;
+			
+			svg path{
+				fill: var(--primary);
+			}
+        }
+    }
+	.right-sidebar{
+		margin-right:-30px;
+		a{
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			justify-content: center;
+			display: flex;
+			align-items: center;
+			border-left: 1px solid $light;
+		}
+	}
+    &>li {
+        &:not(:first-child) {
+            padding-left:1.5rem;
+			@include respond('phone-land') {
+				padding-left:0.5rem;
+			}
+        }
+		
+    }
+    .notification_dropdown {
+        @include respond('phone-land') {
+            position: static;
+        }
+        .nav-link {
+            position: relative;
+            color: $dark;
+			background: transparent;
+			border:1px solid rgba($dark,0.1);
+			border-radius: 2rem;
+			height:45px;
+			width:45px;
+			text-align:center;
+			line-height: 1;
+			@include respond('tab-land') {
+				padding: 10px;
+				height: 40px;
+				width: 40px;
+				line-height: 1;
+			}
+			@include respond('phone'){
+				height:35px;
+				width:35px;
+				padding:8px;
+			}
+			
+            i {
+                font-size: 24px;
+				@include respond('tab-land') {
+					font-size: 18px;
+				}
+				@include respond('phone'){
+					font-size:1rem;
+				}
+				
+            }
+			svg{
+				@include respond('tab-land') {
+					width:18px;
+					height:18px;
+				}
+				@include respond ('phone'){
+					width:1rem;
+					height:1rem;
+				}
+			}
+            .badge {
+                position: absolute;
+                font-size: 12px;
+                border-radius: 50%;
+                right: -7px;
+                top: -5px;
+				padding:0px;
+                font-weight: normal;
+                text-align: center;
+                line-height:20px;
+				height:20px;
+				width:20px;
+				@include respond('phone-land') {
+					line-height:18px;
+					height:20px;
+					width:20px;
+					font-size: 12px;
+				}
+				@include respond ('phone'){
+					height:1rem;
+					width:1rem;
+					font-size:8px;
+					line-height:1rem;
+				}
+            }
+			
+        }
+        .dropdown-item {
+            &:focus,
+            &:active {
+                a {
+                    color: $white;
+                }
+            }
+            a {
+                color: $dark;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        border-width:0;
+        box-shadow: 0 0 37px rgba(8,21,66,0.05);
+        @at-root [data-theme-version="dark"] & {
+            box-shadow: none;
+        }
+    }
+    .header-profile {
+        &>a.nav-link {
+			padding:0;
+			background:var(--rgba-primary-1);
+			border-radius:4rem;
+			display: flex;
+			align-items: center;
+				
+            i {
+                font-weight: 700;
+            }
+			.header-info{
+				padding-right: 18px;
+				text-align: right;
+				padding-left: 18px;
+				
+				@include respond('tab-land') {
+					padding-right: 10px;
+					padding-left: 10px;
+				}
+				@include respond('phone-land') {
+					display:none;
+				}
+				span{
+					font-size:16px;
+					color:var(--primary);
+					display: block;
+					font-weight: 400;
+					@include respond('tab-land') {
+						font-size:14px;
+					}
+				}
+				strong{
+					font-weight:600;
+				}
+			}
+        }
+        .dropdown-menu {
+            padding: 15px 0;
+			width:12.5rem;
+            min-width: 12.5rem;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+			border:1px solid transparent;
+            border-radius: 3rem;
+			@include respond('tab-land') {
+				 width: 40px;
+				height: 40px;
+			}
+			@include respond ('phone'){
+				width:38px;
+				height:38px;
+			}
+        }
+        .dropdown-toggle {
+            i {
+                font-size: 1.25rem;
+            }
+            span {
+                @include respond('phone') {
+                    display: none;
+                }
+            }
+        }
+        .profile_title {
+            background: var(--primary);
+            color: $white;
+            padding: 10px 20px;
+            h5 {
+                color: $white;
+                margin-bottom: 3px;
+            }
+        }
+       
+        .dropdown-item {
+            padding: 8px 24px;
+        }
+    }
+}
+.dz-fullscreen{
+	#icon-minimize{
+		display:none;
+	}
+	&.active{
+		#icon-full{
+			display:none;
+		}
+		#icon-minimize{
+			display:inline-block;
+		}
+	}
+}
+.dz-theme-mode{
+	#icon-light{
+		display:none;
+	}
+	&.active{
+		#icon-light{
+			display:inline-block;
+		}
+		#icon-dark{
+			display:none;
+		}
+	}
+}
+.notification_dropdown,
+.header-profile {
+    .dropdown-menu-end {
+        min-width: 19.375rem;
+        width: 19.375rem;
+        padding: 0rem 0 1rem;
+        top: 100%;
+		box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 24px;
+		position: absolute;
+		inset: 0px 0px auto auto;
+		margin: 0px;
+		-webkit-transform: translateY(89px)!important;
+		transform: translateY(89px)!important;
+		transition: all .2s;
+		@include custommq($max:100rem){
+			-webkit-transform: translateY(91px)!important;
+			transform: translateY(91px)!important;
+		}
+		@include respond ('laptop'){
+			transform: translateY(90px)!important;
+			-webkit-transform: translateY(90px)!important;
+		}
+		@include respond ('tab-land'){
+			transform: translateY(80px)!important;
+			-webkit-transform: translateY(80px)!important;
+		}
+		
+        .notification_title {
+            background: var(--primary);
+            color: $white;
+            padding: 10px 20px;
+            h5 {
+                color: $white;
+                margin-bottom: 3px;
+            }
+        }
+        .media {
+			width: 45px !important;
+			height: 45px !important;
+			font-size: 18px !important;
+            @at-root [data-theme-version="dark"] & {
+                border-color: $d-border;
+            }
+            &>span {
+                width: 35px;
+                height: 35px;
+                border-radius: 50px;
+                display: inline-block;
+                padding: 7px 9px;
+                margin-right: 10px;
+				@at-root [direction="rtl"]#{&} {
+					 margin-right: 0;
+					 margin-left: 10px
+				}
+                &.success {
+                    background: $success-light;
+                    color: $success;
+                }
+                &.primary {
+                    background:var(--rgba-primary-1);
+                    color: var(--primary);
+                }
+                &.danger {
+                    background: $danger-light;
+                    color: $danger;
+                }
+            }
+            .notify-time {
+                width: 100%!important;
+                margin-right: 0!important;
+                color: $l-ctl;
+            }
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 200px;
+                margin-bottom: 0;
+                margin-top: 5px;
+				@include respond('phone') {
+				    max-width: 100px;
+				}
+            }
+        }
+        .all-notification {
+            display: block;
+            padding: 15px 30px 0;
+            color:var(--primary);
+            text-align: center;
+			border-top: 1px solid $light;
+				
+            i {
+                margin-left: 10px;
+            }
+        }
+		&.show{
+			    will-change: transform;
+				animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1, menu-sub-dropdown-animation-move-up 0.3s ease 1;
+		}
+    }
+}
+@keyframes menu-sub-dropdown-animation-fade-in {
+	0%{
+		opacity:0%;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes menu-sub-dropdown-animation-move-up{
+	0%{
+		margin-top:0.75rem;
+	}
+	100%{
+		margin-top:0;
+	}
+}

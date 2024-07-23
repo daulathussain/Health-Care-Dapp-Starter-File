@@ -1,0 +1,190 @@
+// form-wizard
+.form-wizard{
+	border: 0;
+	.nav-wizard{
+		box-shadow: none!important;
+		margin-bottom: 2rem;
+		li{
+			.nav-link{
+				position: relative;
+				span{
+					border-radius: 3.125rem;
+					width: 3rem;
+					height: 3rem;
+					border: 0.125rem solid var(--primary);
+					display: block;
+					line-height: 3rem;
+					color: var(--primary);
+					font-size: 1.125rem;
+					margin: auto;
+					background-color: $white;
+					position: relative;
+					z-index: 1;
+				}
+				&:after{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					height: 0.1875rem;
+					transform: translateY(-50%);
+					background: $dark-light!important;
+					z-index: 0;
+					width: 100%;
+				}
+				&.active{
+					&:after{
+						background: var(--primary)!important;
+					}
+					span{
+						background:var(--primary);
+						color:$white;
+					}
+				}
+				&.done{
+					&:after{
+						background: var(--primary)!important;						
+					}
+					span{
+						background-color: var(--primary);
+						color: $white;
+					}
+					
+				} 
+			}
+			&:last-child{
+				.nav-link{
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}	
+	}
+	.toolbar-bottom{
+		.btn{
+			background-color: var(--primary);
+			border: 0;
+			padding: 0.75rem 1.125rem;
+		}
+	}
+	.tab-content{
+		.tab-pane{
+			padding: 0;
+		}
+	}
+	.emial-setup {
+        label.mailclinet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #EEF5F9;
+			text-align: center;
+			margin: auto;
+			@at-root [data-theme-version="dark"] & {
+				background-color: $d-bg;
+			}
+            @include respond(phone) {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            .mail-icon {
+                font-size: 3rem;
+                display: inline-block;
+                line-height: 1;
+                margin-top: -1rem;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
+            }
+
+            .mail-text {
+                font-size: 1rem;
+                text-align: center;
+                margin-top: .5rem;
+
+                @include respond(phone) {
+                    font-size: 1rem;
+					line-height: 1.25rem;
+                }
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+        }
+    }
+	
+	// emial-setup
+	.emial-setup {
+        label.mailclinet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #EEF5F9;
+			text-align: center;
+			margin: auto;
+			@at-root [data-theme-version="dark"] & {
+				background-color: $d-bg;
+			}
+            @include respond(phone) {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            .mail-icon {
+                font-size: 3rem;
+                display: inline-block;
+                line-height: 1;
+                margin-top: -1rem;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
+            }
+
+            .mail-text {
+                font-size: 1rem;
+                text-align: center;
+                margin-top: .5rem;
+
+                @include respond(phone) {
+                    font-size: 1rem;
+					line-height: 1.25rem;
+                }
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+        }
+    }
+	@include respond('phone-land') {
+		.nav-wizard{
+			flex-direction: unset!important;
+		}
+		.tab-content{
+			height: 100%!important;
+		}
+	}
+	@include respond('phone') {
+		.nav-wizard{
+			li{
+				.nav-link{
+					padding: 0;
+				}
+			}
+		}
+	}
+}

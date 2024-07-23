@@ -1,0 +1,54 @@
+.patient-detail{
+	color:$white;
+	background:#3E4954;
+}
+.map-bx{
+	position:relative;
+	img{
+		max-width:100%;
+		width:100%;
+	}
+	.map-button{
+		background:var(--primary);
+		color:$white;
+		padding:5px 10px;
+		border-radius:5px;
+		font-size:12px;
+		position:absolute;
+		bottom:10px;
+		left:10px;
+	}
+	.map-marker{
+		background:#3E4954;
+		color:$white;
+		font-size:20px;
+		height:37px;
+		width:37px;
+		line-height:38px;
+		border-radius:100%;
+		position:absolute;
+		right:10px;
+		top:10px;
+		text-align:center;
+	}
+}
+span.num{
+	height:40px;
+	font-size:20px;
+	background:var(--primary);
+	color:$white;
+	border-radius:$radius;
+	display:inline-block;
+	line-height:40px;
+	margin-bottom:15px;
+	padding:0 20px;
+}
+.star-icons{
+	i{
+		font-size:22px;
+		color:#FFB800;
+		&:last-child{
+			color:#C9C9C9;
+		}
+	}
+}

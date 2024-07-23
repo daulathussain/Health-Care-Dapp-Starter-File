@@ -1,0 +1,35 @@
+[data-theme-version="dark"] {
+    .sidebar-right {
+		.card-tabs{
+			.nav-tabs{
+				background:transparent;
+				border-color:#f5f5f5;
+				.nav-item{
+					.nav-link{
+						color:$black;
+						&.active{
+							background: var(--rgba-primary-1);	
+						}
+						
+					}
+				} 
+			}
+		}	
+		.form-control{
+			background:$white!important;
+			color:$black!important;
+			border-color:$border-color!important;
+		}
+		.default-select .list{
+			background:$white;
+			.option{
+				&.selected,&.focus,&:hover{
+					background:rgba($black,0.05);
+				}
+			}
+		}
+		.sidebar-right-inner>h4{
+			color:$black!important;
+		}
+    }
+}

@@ -1,0 +1,346 @@
+// Basic Input
+.form-control{
+    background: $white;
+    border: 0.0625rem solid $border;
+	padding: 0.3125rem 1.25rem;
+    color: $dark;
+	height: 56px;
+	border-radius:0.5rem;
+	
+	@include respond('laptop') {
+		height: 42px;
+	}
+	&:hover,
+	&:focus,
+	&.active{
+        box-shadow: none;
+        background: $white;
+        color: $dark;
+    }
+	&:focus{
+		border-color:var(--primary);
+	}
+	&.solid{
+		background:$body-bg;
+		border-color:#ececec;
+		color:#000;
+		&[type="file"]{
+			padding: 6px 10px;
+		}
+	}
+	&.form-control-lg{
+		height:4.5rem;
+		line-height:3.5rem;		
+	}
+	&.form-control-sm{
+		height:2.5rem;
+		line-height: 2rem;
+	}
+}
+.input-group-sm{
+	.form-control{
+		height: 2.5rem;
+	}
+}
+.input-group-lg{
+	.form-control{
+		height:4.5rem;
+	}
+}
+.form-control[type="file"]{
+    line-height: 44px;
+    padding-#{$dz-pos-left}: 12px;
+	
+	@include respond ('laptop'){
+		line-height: 30px;
+	}
+}
+.form-control-sm[type="file"]{
+    line-height: 32px;
+    padding: 4px;
+    padding-left: 8px;
+}
+.form-control-lg[type="file"]{
+	line-height:57px;
+	padding-left:10px;
+}
+input[type="date"] {
+    overflow: hidden;
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+	position: absolute;
+	width: 100%;
+	left: -20px;
+	height: 100%;
+	top: 0;
+	opacity: 0; 
+	background-size: 20px;
+	background-position: right;
+}
+.cal-icon{
+	position: relative;
+	i{
+		position: absolute;
+		top: 50%;
+		right: 16px;	
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+}
+.input-rounded {
+    border-radius: 6.25rem;
+}
+
+
+// Input Color
+[data-theme-version="light"],
+[data-theme-version="dark"] {
+	.input-primary{
+		.form-control{
+			border-color:var(--primary);
+		}	
+		.input-group-text{
+			background-color:var(--primary);
+			color:$white;
+			border-color:transparent;
+		}
+	}
+	.input-danger{
+		.form-control{
+			border-color:$danger;
+		}	
+		.input-group-text{
+			background-color:$danger;
+			color:$white;
+			border-color:transparent;
+		}
+	}
+	.input-info{
+		.form-control{
+			border-color:$info;
+		}	
+		.input-group-text{
+			background-color:$info;
+			color:$white;
+			border-color:transparent;
+		}
+	}
+	.input-success{
+		.form-control{
+			border-color:$success;
+		}	
+		.input-group-text{
+			background-color:$success;
+			color:$white;
+			border-color:transparent;
+		}
+	}
+	.input-warning{
+		.form-control{
+			border-color:$warning;
+		}	
+		.input-group-text{
+			background-color:$warning;
+			color:$white;
+			border-color:transparent;
+		}
+	}
+}
+// Input Outline
+[data-theme-version="light"],
+[data-theme-version="dark"] {
+	.input-primary-o{
+		.form-control{
+			border-color:var(--primary);
+			
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:var(--primary);
+			color:var(--primary);
+		}
+	}
+	.input-danger-o{
+		.form-control{
+			border-color:$danger;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$danger;
+			color:$danger;
+		}
+	}
+	.input-info-o{
+		.form-control{
+			border-color:$info;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$info;
+			color:$info;
+		}
+	}
+	.input-success-o{
+		.form-control{
+			border-color:$success;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$success;
+			color:$success;
+		}
+	}
+	.input-warning-o{
+		.form-control{
+			border-color:$warning;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$warning;
+			color:$warning;
+		}
+	}
+}
+
+// Input Group
+.input-group-text{
+    border: 0.0625rem solid $border;
+    min-width: 3.125rem;
+    display: flex;
+    justify-content: center;
+	padding: 0.532rem 0.75rem;
+	
+    i{
+        font-size: 1rem;
+    }
+}
+.form-check .form-check-input {
+    margin-top: 2px;
+	
+	@include respond('phone'){
+		margin-top: 0;
+	}
+}
+.form-file-label{
+    height: 2.5rem;
+	padding: 0.5rem 0.75rem;
+}
+.input-group-prepend .btn,
+.input-group-append .btn {
+    z-index: 0;
+}
+.custom-select{
+    background: none;
+    border-color: $border;
+    color: $dark;
+    &:focus{
+        box-shadow: none;
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+}
+.form-file-label{
+	background: #656C73;
+	white-space: nowrap;
+	color: $white;
+	@at-root [data-theme-version="dark"] & {
+		background: $d-border;
+		border-color: $d-border;
+		color: $body-color;
+	}
+}
+
+.custom_file_input {
+    .input-group-prepend, 
+    .input-group-append {
+      
+    }
+
+    .form-file-label::after {
+        height: 100%;
+    }
+}
+
+
+.form-control:disabled,
+ .form-control[readonly] {
+    background: $white;
+    opacity: 1;
+}
+
+.form-file{
+	border: 0.0625rem solid #d7dae3;
+    background: #fff;
+    overflow: hidden;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+	@at-root [data-theme-version="dark"] & {
+        background: $d-bg;
+		border-color: $d-border;
+    }
+}
+.input-group{
+	> .form-control-plaintext,
+	> .form-select,
+	> .form-file {
+		position: relative; // For focus state's z-index
+		flex: 1 1 auto;
+		width: 1%;
+		margin-bottom: 0;
+	}
+	.input-group-text{
+		border-radius: $radius;
+		&.radius-style{
+			border-radius: 0.5rem 0 0 0.5rem !important;
+		}
+		&.show-pass{
+			border-radius: 0 0.5rem 0.5rem 0 !important;
+		}
+	}	
+}
+.select2-container--default 
+.select2-selection--multiple
+ .select2-selection__choice{
+	border-radius:$radius;
+}
+
+.custom_file_input{
+	.form-file{
+		.form-control{
+			margin:0;
+			border-radius:0;
+			border:0;
+			line-height: 2.9rem;
+		}
+	}
+	.form-control{
+		padding-left: 12px;
+		line-height: 45px;
+	}
+}
+textarea.form-control{
+	min-height: auto;
+	height: auto !important;
+	padding-top: 10px;
+}
+.form-group{
+	margin-bottom: 1rem;
+	
+	label{
+		margin-bottom: 6px;
+	}
+}	
+.form-control-lg{
+	height: 60px;
+}
+.form-control-sm{
+	height: 30px;
+}
+.form-control.default{
+	height: 50px;
+}
+.br-style{
+	border-top-right-radius: $radius !important;	
+	border-bottom-right-radius: $radius !important;	
+}

@@ -1,0 +1,133 @@
+.dropdown-toggle:focus {
+    box-shadow: none!important;
+  }
+
+  .dropdown-outline{
+      border: .1rem solid var(--primary);
+  }
+
+.dropdown-menu{
+	font-size: inherit;
+	border: 0;
+	z-index: 5;
+	overflow:hidden;
+	border-radius:$radius;
+	box-shadow: 0 0 3.125rem 0 rgba(82, 63, 105, 0.15);
+	margin-top:0;
+	
+	.dropdown-item{
+		font-size: 1rem;
+		color:$body-color;
+		padding: 0.5rem 1.75rem;
+		
+		@include respond('laptop') {
+			padding: 0.375rem 1rem;
+			font-size: 0.875rem;
+		}
+		&:hover,
+		&:focus,
+		&:active,
+		&.active{
+			color: #514e5f;
+		}
+		&.active, 
+		&:active{
+			color: var(--primary);
+			background:var(--rgba-primary-1);
+		}
+	}
+	
+	@at-root [direction="rtl"] #{&} {
+		right: auto !important;
+	}
+	&.show{
+		right: 0;
+	}
+}
+
+////////////////////
+// Custom Dropdown
+///////////////////
+.dropdown-toggle-split {
+    padding: 0 0.625rem;
+    opacity: 0.85;
+	&:after{
+		margin-left:0 !important;
+	}
+	&:active,
+	&:focus,
+	&:hover{
+		opacity:1;
+	}
+}
+
+.dropright .dropdown-toggle::after {
+	content:none;
+}
+.custom-dropdown{
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    .dropdown-menu{
+        border: 0rem;
+        min-width: 10rem;
+    }
+}
+.card-action{
+    .custom-dropdown{
+        margin: 0rem;
+        background: var(--rgba-primary-1);
+        &.show,&:focus,&:hover{
+            background: var(--primary);
+            color: $white;
+        }
+
+        i{
+            display: inline-block;
+            padding-top: 0.5625rem;
+        }
+    }
+}
+
+.dropdown{
+	.dropdown-dots{
+		position: relative;
+		height: 0.3125rem;
+		width: 0.3125rem;
+		background: rgba($dark, 0.4);
+		border-radius: 0.3125rem;
+		display: block;	
+		&:after,
+		&:before{
+			content: "";
+			height: 0.3125rem;
+			width: 0.3125rem;
+			background: rgba($dark, 0.4);
+			position: absolute;
+			border-radius: 0.3125rem;
+		}
+		&:after{
+			right: -0.5rem;
+		}
+		&:before{
+			left: -0.5rem;			
+		}
+		
+		&.text-white{
+			background: rgba($white, 0.7);
+			&:after,
+			&:before{
+				background: rgba($white, 0.7);				
+			}
+		}
+	}
+}
+.btn-group{
+	&.dropstart{
+		.dropdown-menu{
+			&.show{
+				z-index:5;
+			}
+		}
+	}
+} 

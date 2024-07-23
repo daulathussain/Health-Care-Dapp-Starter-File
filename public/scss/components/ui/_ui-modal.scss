@@ -1,0 +1,26 @@
+.modal-header{
+	padding: 1rem 1.875rem;
+
+	.close{
+		padding: 0.875rem 1.815rem;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		float: none;
+		top: 0;
+		font-size: 30px;
+		font-weight: 100;
+	}
+}
+.modal-body{
+	padding: 1.875rem;
+}
+.modal-footer{
+	padding: 1rem 1.875rem;
+}
+.modal-content{
+	border-radius:$radius;
+}
+.modal-backdrop{
+    z-index: 10!important;
+}

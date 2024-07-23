@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Dr. Alexandro Jr.",
+    "image": "images/doctors/5.jpg",
+    "rating": "4.1",
+    "category": "Dentist",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": "Dr. Samantha",
+    "image": "images/doctors/1.jpg",
+    "rating": "4.5",
+    "category": "Physical Therapy",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": " Dr. Aliandro M",
+    "image": "images/doctors/2.jpg",
+    "rating": "3.5",
+    "category": "Nursing",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": "Dr. Samuel",
+    "image": "images/doctors/3.jpg",
+    "rating": "4.4",
+    "category": "Gynecologist",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": "Dr. Melinda",
+    "image": "images/doctors/4.jpg",
+    "rating": "5",
+    "category": "Dentist",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": "Dr. Alexandro Jr.",
+    "image": "images/doctors/1.jpg",
+    "rating": "4.7",
+    "category": "Dentist",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": "Dr. Aliandro M",
+    "image": "images/doctors/2.jpg",
+    "rating": "4.8",
+    "category": "Nursing",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  },
+  {
+    "name": " Dr. Samuel",
+    "image": "images/doctors/3.jpg",
+    "rating": "4.1",
+    "category": "Gynecologist",
+    "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+  }
+]

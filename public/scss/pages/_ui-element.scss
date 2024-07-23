@@ -1,0 +1,134 @@
+.element-area {
+    display: flex;
+}
+.element-area .element-menu{
+    position: sticky;
+    top: 7rem;
+	padding-right: 30px;
+	height: 100%;
+    min-width: 240px;
+    width: 240px;
+	
+	@include respond ('tab-port'){
+		display:none;
+	}
+}
+.element-menu-inner{
+	background-color: #fff;
+    transition: all .5s ease-in-out;
+    position: relative;
+    border: 0px solid transparent;
+    border-radius: 0.75rem;
+    box-shadow: 0px 12px 33px 0px rgba(62, 73, 84, 0.08);
+    padding: 20px;
+	@include transitionMedium;
+    top: 0;
+}
+.element-area .element-menu.is-fixed .element-menu-inner{
+	position: fixed;
+    top: 115px;
+	width:210px;
+	min-width:210px;
+}
+.element-area .element-view + .element-menu{
+	padding-#{$dz-pos-left}: 30px;
+	padding-#{$dz-pos-right}: 0;
+}
+.element-view{
+	width: calc(100% - 240px);
+	 
+	@include respond ('tab-port'){
+		width:100%;
+	}
+}
+.nav-link{
+	color: var(--primary);
+	
+	&:focus,
+	&:active,
+	&:hover{
+		color: var(--primary);	
+	}
+}
+
+.element-nav{
+	padding-#{$dz-pos-left}: 15px;
+	
+	li{
+		position: relative;
+	
+		&:after{
+			content: "";
+			height: 5px;
+			width: 5px;
+			background-color: #000;
+			border-radius: 50px;
+			position: absolute;
+			top: 11px;
+			#{$dz-pos-left}: -15px;
+			opacity: 0.1;
+		}
+		a{
+			padding: 3px 0;
+			font-size: 14px;
+			display: block;
+		}
+		&.active{
+			a{
+				color: var(--primary);
+			}
+			&:after{
+				opacity: 1;
+				background-color: var(--primary);
+			}
+		}
+	}
+}
+.dzm-tabs{
+	padding:4px;
+    border-radius:  0.625rem;
+    background-color: var(--rgba-primary-1);
+    border: none;
+    flex-wrap: nowrap;
+	
+	.nav-item{
+		.nav-link{
+			border-radius:0.625rem;
+			&.active{
+				background:var(--primary)!important;
+				color:$white;
+				border-color:transparent;
+			}
+			&:hover{
+				border:1px solid transparent;
+			}
+		}
+	}
+	@include respond ('phone'){
+		margin-top:1rem;
+	}
+}
+.dz-card{
+	.card-body{
+		border-radius:0 0 $radius $radius;
+		
+		&.code-area{
+			background:#f8f9fa;
+			
+			.language-html{
+				background: transparent;
+				color:#212529;
+				padding: 15px;
+			}
+		}
+	}
+	.card-footer{
+		color:$body-color!important;
+	}
+	.badge-box {
+		position: relative;
+		background: black;
+		opacity: 0.6;
+		border-radius: 0 0 0.625rem 0.625rem;
+	}
+}

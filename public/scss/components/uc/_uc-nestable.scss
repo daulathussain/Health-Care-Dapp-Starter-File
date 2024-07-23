@@ -1,0 +1,26 @@
+// Variable.scss
+.nestable-cart {
+    overflow: hidden;
+}
+
+.dd-handle {
+    color: $white;
+    background:var(--primary);
+    border-radius: 0;
+    border: 1px solid $border;
+	cursor:all-scroll;
+}
+.dd-handle:hover {
+    color: $white;
+    background:var(--primary);
+}
+.dd3-content:hover {
+    color: $white;
+    background:var(--primary);
+}
+.dd3-content {
+    color: $white;
+}
+.dd-item > button{
+	color: #fff;
+}

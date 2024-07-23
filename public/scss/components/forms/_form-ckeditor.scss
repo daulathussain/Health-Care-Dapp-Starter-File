@@ -1,0 +1,42 @@
+.ck{
+	height: 200px;
+	.ck-list{
+		background-color: #f9f9f9 !important;
+	}
+}
+.ck.ck-editor{
+	.ck.ck-button{
+		padding: 6px 8px;
+		background-color: rgba(30, 170, 231, 0.1);
+		color: $primary;
+		font-weight: 900;
+	}
+	.ck.ck-toolbar{
+		background-color: #f9f9f9;
+		border: 0;
+		padding: 5px 10px;
+	}
+	.ck.ck-toolbar__separator{
+		display: none;
+	}
+	.ck-content{
+		background-color: #f9f9f9;
+		border-width: 1px 0 0;
+		border-color: #e7e5ef;
+	}
+}
+.ck-editor__editable,
+.ck.ck-toolbar .ck.ck-toolbar__separator{
+	background-color:#f9f9f9 !important;	
+}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+	border-color: #43dc80 !important;
+}
+.ck.ck-button:not(.ck-disabled):hover,
+ a.ck.ck-button:not(.ck-disabled):hover,
+ .ck.ck-button:not(.ck-disabled){
+	background:rgba($primary,.1)!important;
+}
+.ck.ck-list__item .ck-button.ck-on{
+	color: var(--primary) !important;
+}

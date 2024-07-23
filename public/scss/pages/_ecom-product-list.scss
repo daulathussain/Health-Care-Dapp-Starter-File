@@ -1,0 +1,98 @@
+/*
+===================================
+    list view
+===================================*/
+.new-arrival-content {
+    .item {
+        font-size: 12px;
+        color:$d-ctl;
+    }
+    h4 {
+        font-size: 16px;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 10px;
+		a{
+			color:$black;
+		}
+    }
+	.discount{
+		font-size: 0.875rem;
+		margin-right: 8px;
+		opacity: 0.8;
+		color: var(--primary);
+	}
+    .price {
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+		float: right;
+    }
+    p {
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 6px;
+        line-height: 24px;
+    }
+    .text-content {
+        margin-top: 18px;
+		 color:$d-ctl;
+    }
+}
+
+.success-icon {
+    color: $success;
+    font-size: 16px;
+}
+.new-arrival-content.text-center .price{
+	float: unset;
+}
+.comment-review {
+    margin-bottom: 15px;
+    display: table;
+    width: 100%;
+    .client-review {
+        color: $d-ctl;
+        padding-right: 20px;
+        text-decoration: underline !important;
+        font-size: 14px;
+    }
+    .span {
+        color: $d-ctl;
+        font-size: 14px;
+    }
+}
+
+.star-rating li {
+    display: inline-block;
+    i {
+        color: gold;
+    }
+}
+.star-rating ul{
+	margin-bottom:5px;
+}
+.review-text{
+	&.style-1{
+		@include custommq($max: 1600px){
+			font-size:13px;
+		}
+		@include respond ('laptop'){
+			font-size:12px;
+			
+		}
+	}
+}
+.product-review{
+	&.style-1{
+		@include custommq($max: 1600px){
+			font-size:13px;
+		}
+		@include respond ('laptop'){
+			font-size:12px;
+			
+		}
+	}
+}		
